@@ -7,6 +7,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { FormsModule } from '@angular/forms';
+import { NavBarAdminMainComponent } from './nav-bar-admin-main/nav-bar-admin-main.component';
 
 
 let myRoute:Routes=[
@@ -28,7 +29,8 @@ let myRoute:Routes=[
   declarations: [
     AppComponent,
     AdminLoginComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    NavBarAdminMainComponent
   ],
   imports: [
     BrowserModule,
