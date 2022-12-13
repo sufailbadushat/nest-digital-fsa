@@ -8,6 +8,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { NavBarAdminMainComponent } from './nav-bar-admin-main/nav-bar-admin-main.component';
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { ViewEmployeeComponent } from './view-employee/view-employee.component';
+import { SearchEmployeeComponent } from './search-employee/search-employee.component';
+import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 let myRoute:Routes=[
@@ -22,7 +27,20 @@ let myRoute:Routes=[
   {
     path:"adminDashboard",
     component:AdminDashboardComponent
+  }
+  ,
+  {
+    path:"employeeAdd",
+    component:AddEmployeeComponent
   },
+  {
+    path:"viewEmployee",
+    component:ViewEmployeeComponent
+  },
+  {
+    path:"deleteEmployee",
+    component:DeleteEmployeeComponent
+  }
 ]
 
 @NgModule({
@@ -30,13 +48,19 @@ let myRoute:Routes=[
     AppComponent,
     AdminLoginComponent,
     AdminDashboardComponent,
-    NavBarAdminMainComponent
+    NavBarAdminMainComponent,
+    AddEmployeeComponent,
+    ViewEmployeeComponent,
+    SearchEmployeeComponent,
+    DeleteEmployeeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(myRoute),
-    FormsModule
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
