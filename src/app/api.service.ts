@@ -16,4 +16,12 @@ export class ApiService {
   viewEmployee=()=>{
     return this.http.get("http://localhost:8080/viewEmployee");
   }
+
+  empLogin=(data:any)=>{
+    return this.http.post("http://localhost:8080/employeeLogin",data);
+  }
+
+  securityLogin=(data:any)=>{
+    return this.http.post("http://localhost:8080/securityLogin",data);
+  }
 }

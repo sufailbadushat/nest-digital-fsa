@@ -13,6 +13,9 @@ import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 import { SearchEmployeeComponent } from './search-employee/search-employee.component';
 import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { EmployeePotrtalComponent } from './employee-potrtal/employee-potrtal.component';
+import { SecurityLoginComponent } from './security-login/security-login.component';
 
 
 let myRoute:Routes=[
@@ -38,8 +41,16 @@ let myRoute:Routes=[
     component:ViewEmployeeComponent
   },
   {
-    path:"deleteEmployee",
-    component:DeleteEmployeeComponent
+    path:"employeePortal",
+    component:EmployeePotrtalComponent
+  },
+  {
+    path:"employeeLogin",
+    component:UserLoginComponent
+  },
+  {
+    path:"securityLogin",
+    component:SecurityLoginComponent
   }
 ]
 
@@ -52,7 +63,10 @@ let myRoute:Routes=[
     AddEmployeeComponent,
     ViewEmployeeComponent,
     SearchEmployeeComponent,
-    DeleteEmployeeComponent
+    DeleteEmployeeComponent,
+    UserLoginComponent,
+    EmployeePotrtalComponent,
+    SecurityLoginComponent
   ],
   imports: [
     BrowserModule,
