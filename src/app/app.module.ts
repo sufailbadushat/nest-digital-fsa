@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { EmployeePotrtalComponent } from './employee-potrtal/employee-potrtal.component';
 import { SecurityLoginComponent } from './security-login/security-login.component';
+import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 
 
 let myRoute:Routes=[
@@ -66,7 +67,8 @@ let myRoute:Routes=[
     DeleteEmployeeComponent,
     UserLoginComponent,
     EmployeePotrtalComponent,
-    SecurityLoginComponent
+    SecurityLoginComponent,
+    UpdateEmployeeComponent
   ],
   imports: [
     BrowserModule,

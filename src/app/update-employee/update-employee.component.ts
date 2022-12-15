@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-add-employee',
-  templateUrl: './add-employee.component.html',
-  styleUrls: ['./add-employee.component.css']
+  selector: 'app-update-employee',
+  templateUrl: './update-employee.component.html',
+  styleUrls: ['./update-employee.component.css']
 })
-export class AddEmployeeComponent {
-
+export class UpdateEmployeeComponent {
+  id:any=localStorage.getItem("updateId")
   name = ""
   empCode=""
   designation = ""
@@ -20,11 +21,16 @@ export class AddEmployeeComponent {
 
 
 
-  constructor(private api:ApiService){}
+  constructor(private api:ApiService,private router:Router , private activatedRoute:ActivatedRoute){
+    
+    
+  }
 
   readValues = () => {
+   
     let data: any =
-    {
+    { 
+      "id":this.id,
       "name": this.name,
       "empCode":this.empCode,
       "designation": this.designation,
@@ -37,21 +43,15 @@ export class AddEmployeeComponent {
     }
     console.log(data)
 
-    this.api.addEmployee(data).subscribe(
+    this.api.updateEmployee(data).subscribe(
       (response:any) => {
         if(response.status=="success"){
-          alert("Registerd successfully");
-          this.name=""
-          this.empCode=""
-          this.designation = ""
-          this.salary = ""
-          this.companyName = ""
-          this.address=""
-          this.username=""
-          this.password=""
-          this.email=""
-        
-        
+          alert("Updated successfully");
+         this.router.navigate([('/viewEmployee')])
+          localStorage.removeItem("updateId");
+          this.id=""
+          console.log(this.id);
+          
         }
         else{
           alert("something went wrong!");
