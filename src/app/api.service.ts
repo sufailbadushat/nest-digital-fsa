@@ -28,4 +28,12 @@ export class ApiService {
   updateEmployee=(data:any)=>{
     return this.http.post("http://localhost:8080/updateEmployee",data);
   }
+
+  searchEmployee=(data:any)=>{
+    return this.http.post("http://localhost:8080/searchEmployee",data);
+  }
+
+  getById=(id:any)=>{
+    return this.http.post("http://localhost:8080/getEmpById",id);
+  }
 }

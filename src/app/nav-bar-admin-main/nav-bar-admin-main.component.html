@@ -22,10 +22,9 @@
                     Employee
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark font-monospace text-secondary">
-                    <li><a class="dropdown-item  " routerLink="/viewEmployee" >View</a></li>
+                    <li><a class="dropdown-item  " routerLink="/viewEmployee" >View All</a></li>
                     <li><a class="dropdown-item " routerLink="/employeeAdd" >Add</a></li>
-                    <li><a class="dropdown-item " routerLink="/searchEmployee" >Search</a></li>
-                    <li><a class="dropdown-item " routerLink="/deleteEmployee" >Delete</a></li>
+                    <li><a class="dropdown-item " routerLink="/searchEmployee" >Actions</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -33,20 +32,22 @@
                     Security
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark font-monospace ">
-                    <li><a class="dropdown-item " routerLink="/viewSecurity" >View</a></li>
+                    <li><a class="dropdown-item " routerLink="/viewSecurity" >View All</a></li>
                     <li><a class="dropdown-item " routerLink="/addSecurity" >Add</a></li>
-                    <li><a class="dropdown-item " routerLink="/searchSecurity" >Search</a></li>
-                    <li><a class="dropdown-item " routerLink="/deleteSecurity" >Delete</a></li>
+                    <li><a class="dropdown-item " routerLink="/searchSecurity" >Actions</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-secondary font-monospace fw-bold"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Log
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark font-monospace ">
+                    <li><a class="dropdown-item " routerLink="/employee-log" >Employee Log</a></li>
+                    <li><a class="dropdown-item " routerLink="/visitor-log" >Visitor Log</a></li>
                   </ul>
                 </li>
                 <li class="nav-item active fw-bold ">
                     <a class="nav-link text-secondary font-monospace" routerLink="/Lms">LMS</a>
-                </li>
-                <li class="nav-item active fw-bold ">
-                    <a class="nav-link text-secondary font-monospace" routerLink="/allLog">AllLog</a>
-                </li>
-                <li class="nav-item active fw-bold ">
-                    <a class="nav-link text-secondary font-monospace" routerLink="/searchLog">SearchLog</a>
                 </li>
                 
               </ul>
@@ -60,3 +61,4 @@
 
     </div>
 </nav>
+

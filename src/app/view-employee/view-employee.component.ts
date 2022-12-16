@@ -17,10 +17,4 @@ export class ViewEmployeeComponent {
   }
   employee:any=[  ]
 
-  updateEmployee=(id:any)=>{
-    localStorage.setItem("updateId",id)
-    console.log(id);
-    
-    this.router.navigate(['/updateEmployee']);
-  }
 }

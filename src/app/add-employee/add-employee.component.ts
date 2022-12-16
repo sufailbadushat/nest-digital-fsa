@@ -49,8 +49,7 @@ export class AddEmployeeComponent {
           this.address=""
           this.username=""
           this.password=""
-          this.email=""
-        
+          this.email="" 
         
         }
         else{

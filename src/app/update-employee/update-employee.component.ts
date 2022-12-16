@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -19,11 +19,21 @@ export class UpdateEmployeeComponent {
   password=""
   email=""
 
+  toUpdate:any=[]
 
 
-  constructor(private api:ApiService,private router:Router , private activatedRoute:ActivatedRoute){
-    
-    
+
+  constructor(private api:ApiService,private router:Router ){
+    let id:any={"id":this.id}
+   api.getById(id).subscribe(
+    (response:any)=>{
+      console.log(response);
+      this.toUpdate=response
+      console.log(this.toUpdate);
+      
+      
+    }
+   )
   }
 
   readValues = () => {
@@ -47,11 +57,10 @@ export class UpdateEmployeeComponent {
       (response:any) => {
         if(response.status=="success"){
           alert("Updated successfully");
-         this.router.navigate([('/viewEmployee')])
-          localStorage.removeItem("updateId");
+         this.router.navigate([('/searchEmployee')])
+          localStorage.removeItem('updateId');
           this.id=""
           console.log(this.id);
-          
         }
         else{
           alert("something went wrong!");
@@ -61,4 +70,5 @@ export class UpdateEmployeeComponent {
     
   }
   data:any=[]
+  
 }

@@ -1,1 +1,57 @@
-<p>search-employee works!</p>
+<app-nav-bar-admin-main></app-nav-bar-admin-main>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 div-md-12 col-lg-12 div-xl-12 div-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <h1 class="text-dark font-monospace fw-bold">Search Employee</h1>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label font-monospace fw-bold">Employee code</label>
+                    <input name="empCode" [(ngModel)]="empCode" type="number" placeholder="Enter employee code"
+                        class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <button (click)="searchEmployee()" class="btn btn-secondary font-monospace py-1 my-5">Search</button>
+                </div>
+            </div>
+        </div>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Employee Code</th>
+                    <th scope="col">Employee Name</th>
+                    <th scope="col">Employee Designation</th>
+                    <th scope="col">Employee Salary</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Username</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let j of employeeSearch">
+                
+                    <td>{{j.empCode}}</td>
+                    <td>{{j.name}}</td>
+                    <td>{{j.designation}}</td>
+                    <td>{{j.salary}}</td>
+                    <td>{{j.address}}</td>
+                    <td>{{j.username}}</td>
+                    <td><button class="btn btn-dark py-1 px-2 font-monospace" (click)="updateEmployee(j.id)" >Update</button></td>
+                    <td><button class="btn btn-dark py-1 px-2 font-monospace" >Delete</button></td>
+
+
+                </tr>
+               
+            </tbody>
+        </table>
+        
+
+    </div>
+</div>
