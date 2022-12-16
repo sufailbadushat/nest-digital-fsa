@@ -50,4 +50,8 @@ updateEmployee=(id:any)=>{
   
   this.router.navigate(['/updateEmployee']);
 }
+
+
+
+
 }

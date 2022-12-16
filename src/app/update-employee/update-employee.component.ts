@@ -28,10 +28,14 @@ export class UpdateEmployeeComponent {
    api.getById(id).subscribe(
     (response:any)=>{
       console.log(response);
-      this.toUpdate=response
-      console.log(this.toUpdate);
-      
-      
+      this.empCode= response[0].empCode
+        this.name= response[0].name
+        this.email= response[0].email
+        this.address= response[0].address
+        this.designation= response[0].designation
+        this.username= response[0].username
+        this.password=response[0].password
+        this.salary=response[0].salary
     }
    )
   }

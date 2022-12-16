@@ -10,7 +10,7 @@
                     </div>
                 </div>
 
-                <div class="row g-3" *ngFor="let k of toUpdate" >
+                <div class="row g-3"  >
 
                     <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                         <label for="" class="form-label text-dark">Name</label>
@@ -18,33 +18,33 @@
                     </div>
                     <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                         <label for="" class="form-label text-dark">Employee Code</label>
-                        <input name="empCode" [(ngModel)]="empCode" type="number"  class="form-control" value={{k.empCode}}>
+                        <input name="empCode" [(ngModel)]="empCode" type="number"  class="form-control" value={{empCode}}>
                     </div>
                     <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                         <label for="" class="form-label text-dark">Address</label>
-                        <input name="address" [(ngModel)]="address" type="text"  class="form-control" value="{{k.address}}">
+                        <input name="address" [(ngModel)]="address" type="text"  class="form-control" value="{{address}}">
                     </div>
               
                     <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                         <label for="" class="form-label text-dark">Designation</label>
-                        <input name="designation" [(ngModel)]="designation" type="text" class="form-control" value="{{k.designation}}">
+                        <input name="designation" [(ngModel)]="designation" type="text" class="form-control" value="{{designation}}">
                     </div>
                     <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                         <label for="" class="form-label text-dark">Email Id</label>
-                        <input name="email" [(ngModel)]="email" type="text" class="form-control" value="{{k.email}}">
+                        <input name="email" [(ngModel)]="email" type="text" class="form-control" value="{{email}}">
                     </div>
                     <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                         <label for="" class="form-label text-dark">Salary</label>
-                        <input name="salary" [(ngModel)]="salary" type="number" class="form-control" value="{{k.salary}}">
+                        <input name="salary" [(ngModel)]="salary" type="number" class="form-control" value="{{salary}}">
                     </div>
                  
                     <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                         <label for="" class="form-label text-dark">Username</label>
-                        <input name="username" [(ngModel)]="username" type="text" class="form-control" value="{{k.username}}">
+                        <input name="username" [(ngModel)]="username" type="text" class="form-control" value="{{username}}">
                     </div>
                     <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                         <label for="" class="form-label text-dark">password</label>
-                        <input name="password" [(ngModel)]="password" type="text" class="form-control" value="{{k.password}}">
+                        <input name="password" [(ngModel)]="password" type="text" class="form-control" value="{{password}}">
                     </div>
                   
                     

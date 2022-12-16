@@ -36,4 +36,9 @@ export class ApiService {
   getById=(id:any)=>{
     return this.http.post("http://localhost:8080/getEmpById",id);
   }
+
+  
+  deleteEmployee=(data:any)=>{
+    return this.http.post("http://localhost:8080/deleteEmployee",data);
+  }
 }
