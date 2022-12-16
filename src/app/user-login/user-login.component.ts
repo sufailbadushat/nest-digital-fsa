@@ -12,6 +12,7 @@ export class UserLoginComponent {
 
   username = ""
   password = ""
+  
 
   constructor(private route: Router, private api: ApiService) { }
   searchUsers:any=[]
@@ -31,7 +32,10 @@ export class UserLoginComponent {
         }
         else {
           this.searchUsers=response
-          this.route.navigate(['/employeePortal'])
+          console.log(this.searchUsers);
+          
+          localStorage.setItem("id",response.id)
+          this.route.navigate(['/employee-profile'])
         }
       }
     )

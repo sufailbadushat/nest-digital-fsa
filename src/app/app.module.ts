@@ -17,6 +17,9 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { EmployeePotrtalComponent } from './employee-potrtal/employee-potrtal.component';
 import { SecurityLoginComponent } from './security-login/security-login.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
+import { EmpNavComponent } from './emp-nav/emp-nav.component';
+import { LmsEmpComponent } from './lms-emp/lms-emp.component';
+import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
 
 
 let myRoute:Routes=[
@@ -68,7 +71,10 @@ let myRoute:Routes=[
     UserLoginComponent,
     EmployeePotrtalComponent,
     SecurityLoginComponent,
-    UpdateEmployeeComponent
+    UpdateEmployeeComponent,
+    EmpNavComponent,
+    LmsEmpComponent,
+    EmployeeProfileComponent
   ],
   imports: [
     BrowserModule,
