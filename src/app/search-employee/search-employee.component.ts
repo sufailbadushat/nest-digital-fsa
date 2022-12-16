@@ -51,7 +51,19 @@ updateEmployee=(id:any)=>{
   this.router.navigate(['/updateEmployee']);
 }
 
-
+//delete employee
+deleteBtnClick=(id:any)=>{
+  let data:any={"id":id}
+  console.log(data);
+  
+  this.api.deleteEmployee(data).subscribe(
+    (generated:any)=>{
+     console.log(generated);
+     this.router.navigate(['/searchEmployee'])
+     
+    }
+  )
+}
 
 
 }

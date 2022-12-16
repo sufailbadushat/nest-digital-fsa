@@ -44,7 +44,7 @@
                     <td>{{j.address}}</td>
                     <td>{{j.username}}</td>
                     <td><button class="btn btn-dark py-1 px-2 font-monospace" (click)="updateEmployee(j.id)" >Update</button></td>
-                    <td><button class="btn btn-dark py-1 px-2 font-monospace" >Delete</button></td>
+                    <td><button class="btn btn-dark py-1 px-2 font-monospace" (click)="deleteBtnClick(j.id)">Delete</button></td>
 
 
                 </tr>
