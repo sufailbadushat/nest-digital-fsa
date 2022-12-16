@@ -20,6 +20,10 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
 import { EmpNavComponent } from './emp-nav/emp-nav.component';
 import { LmsEmpComponent } from './lms-emp/lms-emp.component';
 import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
+import { SecurityProfileComponent } from './security-profile/security-profile.component';
+import { AddVisitorsLogComponent } from './add-visitors-log/add-visitors-log.component';
+import { AddEmployeesLogComponent } from './add-employees-log/add-employees-log.component';
+import { SecurityNavComponent } from './security-nav/security-nav.component';
 
 
 let myRoute:Routes=[
@@ -74,7 +78,11 @@ let myRoute:Routes=[
     UpdateEmployeeComponent,
     EmpNavComponent,
     LmsEmpComponent,
-    EmployeeProfileComponent
+    EmployeeProfileComponent,
+    SecurityProfileComponent,
+    AddVisitorsLogComponent,
+    AddEmployeesLogComponent,
+    SecurityNavComponent
   ],
   imports: [
     BrowserModule,

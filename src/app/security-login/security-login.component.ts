@@ -24,11 +24,10 @@ export class SecurityLoginComponent {
     this.api.securityLogin(data).subscribe(
       (response:any)=>{
         if(response.status=="success"){
-          this.router.navigate(['/viewSecurity']);
+          localStorage.setItem("securityId",response.userInfo)
+          this.router.navigate(['/security-profile']);
         }
         else{
-          this.username=""
-          this.password=""
           alert("Invalid username or password!");
         }
       }
