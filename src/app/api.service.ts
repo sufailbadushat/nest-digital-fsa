@@ -46,4 +46,13 @@ export class ApiService {
   getSecurityById=(id:any)=>{
     return this.http.post("http://localhost:8080/getSecurityById",id);
   }
+
+  
+  addVisitorLog=(id:any)=>{
+    return this.http.post("http://localhost:8080/addVisitor",id);
+  }
+
+  addEmployeeLog=(id:any)=>{
+    return this.http.post("http://localhost:8080/addEmpLog",id);
+  }
 }
