@@ -26,6 +26,7 @@ import { AddEmployeesLogComponent } from './add-employees-log/add-employees-log.
 import { SecurityNavComponent } from './security-nav/security-nav.component';
 import { ApplyLeaveComponent } from './apply-leave/apply-leave.component';
 import { LeaveStatusComponent } from './leave-status/leave-status.component';
+import { AdminLmsComponent } from './admin-lms/admin-lms.component';
 
 
 let myRoute:Routes=[
@@ -86,7 +87,8 @@ let myRoute:Routes=[
     AddEmployeesLogComponent,
     SecurityNavComponent,
     ApplyLeaveComponent,
-    LeaveStatusComponent
+    LeaveStatusComponent,
+    AdminLmsComponent
   ],
   imports: [
     BrowserModule,
