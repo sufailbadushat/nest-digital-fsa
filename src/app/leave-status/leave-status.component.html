@@ -1,3 +1,40 @@
 
 
-<app-emp-nav></app-emp-nav>
+
+<div class="view bckim"   style=" height: 105vh;  background-image: url(https://img.freepik.com/premium-photo/green-wall-mockup-with-green-plant-shelf3d-rendering_41470-4114.jpg?w=1380);   background-repeat: no-repeat;    background-size: cover;   background-position: center center;">
+
+    <app-emp-nav></app-emp-nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <div class="row g-3 mt-4">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <table class="table table-dark table-striped">
+                            <thead>
+                            <tr scope="row" class="font-monospace">
+                                <th scope="col">Leave Type</th>
+                                <th scope="col">Reason</th>
+                                <th scope="col">From</th>
+                                <th scope="col">To</th>
+                                <th scope="col">Days</th>
+                                <th scope="col">Status</th>
+                            </tr></thead>
+                            <tbody>
+                            <tr *ngFor="let i of leave" scope="row">
+                                <td scope="col">{{i.typeOfleave}}</td>
+                                <td scope="col">{{i.reason}}</td>
+                                <td scope="col">{{i.from}}</td>
+                                <td scope="col">{{i.to}}</td>
+                                <td scope="col">{{i.days}}</td>
+                                <td scope="col" *ngIf="i.status==-1"><button class="btn btn-dark " >Pending</button></td>
+                                <td scope="col" *ngIf="i.status==1"><button class="btn btn-dark" >Approved</button></td>
+                                <td scope="col" *ngIf="i.status==0"><button class="btn btn-dark" >Rejected</button></td>
+    
+                            </tr></tbody>
+                        </table>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+      </div></div>

@@ -62,5 +62,9 @@ export class ApiService {
   addLeaves=(value:any)=>{
     return this.http.post("http://localhost:8080/addLeaves",value)
   }
-  
+
+  leaveStatus=(value:any)=>{
+    return this.http.post("http://localhost:8080/searchLeaves",value)
+  }
+
 }

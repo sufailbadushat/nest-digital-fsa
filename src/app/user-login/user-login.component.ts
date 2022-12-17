@@ -33,6 +33,8 @@ export class UserLoginComponent {
         else {
           this.searchUsers=response
           console.log(this.searchUsers);
+
+          localStorage.setItem("empId",response.employeeCode)
           
           localStorage.setItem("id",response.id)
           this.route.navigate(['/employee-profile'])
