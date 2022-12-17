@@ -55,4 +55,12 @@ export class ApiService {
   addEmployeeLog=(id:any)=>{
     return this.http.post("http://localhost:8080/addEmpLog",id);
   }
+
+  searchTotal=(value:any)=>{
+    return this.http.post("http://localhost:8080/searchTotal",value)
+  }
+  addLeaves=(value:any)=>{
+    return this.http.post("http://localhost:8080/addLeaves",value)
+  }
+  
 }

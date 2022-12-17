@@ -24,6 +24,8 @@ import { SecurityProfileComponent } from './security-profile/security-profile.co
 import { AddVisitorsLogComponent } from './add-visitors-log/add-visitors-log.component';
 import { AddEmployeesLogComponent } from './add-employees-log/add-employees-log.component';
 import { SecurityNavComponent } from './security-nav/security-nav.component';
+import { ApplyLeaveComponent } from './apply-leave/apply-leave.component';
+import { LeaveStatusComponent } from './leave-status/leave-status.component';
 
 
 let myRoute:Routes=[
@@ -82,7 +84,9 @@ let myRoute:Routes=[
     SecurityProfileComponent,
     AddVisitorsLogComponent,
     AddEmployeesLogComponent,
-    SecurityNavComponent
+    SecurityNavComponent,
+    ApplyLeaveComponent,
+    LeaveStatusComponent
   ],
   imports: [
     BrowserModule,
