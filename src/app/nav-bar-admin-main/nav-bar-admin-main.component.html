@@ -46,8 +46,14 @@
                     <li><a class="dropdown-item " routerLink="/visitor-log" >Visitor Log</a></li>
                   </ul>
                 </li>
-                <li class="nav-item active fw-bold ">
-                    <a class="nav-link text-secondary font-monospace" routerLink="/admin-lms">LMS</a>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-secondary font-monospace fw-bold"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    LMS
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark font-monospace ">
+                    <li><a class="dropdown-item " routerLink="/admin-lms-history" >History</a></li>
+                    <li><a class="dropdown-item " routerLink="/admin-lms" >Action</a></li>
+                  </ul>
                 </li>
                 
               </ul>

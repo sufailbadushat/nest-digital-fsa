@@ -27,6 +27,7 @@ import { SecurityNavComponent } from './security-nav/security-nav.component';
 import { ApplyLeaveComponent } from './apply-leave/apply-leave.component';
 import { LeaveStatusComponent } from './leave-status/leave-status.component';
 import { AdminLmsComponent } from './admin-lms/admin-lms.component';
+import { AdminLmsHistoryComponent } from './admin-lms-history/admin-lms-history.component';
 
 
 let myRoute:Routes=[
@@ -88,7 +89,8 @@ let myRoute:Routes=[
     SecurityNavComponent,
     ApplyLeaveComponent,
     LeaveStatusComponent,
-    AdminLmsComponent
+    AdminLmsComponent,
+    AdminLmsHistoryComponent
   ],
   imports: [
     BrowserModule,

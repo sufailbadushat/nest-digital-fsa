@@ -1,0 +1,51 @@
+
+
+
+<div class="view bckim"
+style=" height: 105vh;  background-color: rgba(47, 43, 43, 0.538);   background-size: cover;   background-position: center center;">
+<app-nav-bar-admin-main></app-nav-bar-admin-main>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr scope="row" class="font-monospace">
+                                <th scope="col">Employee Code</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Designation</th>
+                                <th scope="col">Leave Type</th>
+                                <th scope="col">Reason</th>
+                                <th scope="col">From</th>
+                                <th scope="col">To</th>
+                                <th scope="col">Days</th>
+                                <th scope="col">Remark</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let i of data" scope="row">
+                                <td scope="col" *ngIf="i.status!=-1">{{i.emp_code}}</td>
+                                <td scope="col" *ngIf="i.status!=-1">{{i.name}}</td>
+                                <td scope="col" *ngIf="i.status!=-1">{{i.designation}}</td>
+                                <td scope="col" *ngIf="i.status!=-1">{{i.type_ofleave}}</td>
+                                <td scope="col" *ngIf="i.status!=-1">{{i.reason}}</td>
+                                <td scope="col" *ngIf="i.status!=-1">{{i.from}}</td>
+                                <td scope="col" *ngIf="i.status!=-1">{{i.to}}</td>
+                                <td scope="col" *ngIf="i.status!=-1">{{i.days}}</td>
+                                <td scope="col" *ngIf="i.status!=-1">{{i.remarks}}</td>
+                                <td scope="col" *ngIf="i.status==0">Rejected</td>
+                                <td scope="col" *ngIf="i.status==1">Approved</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>

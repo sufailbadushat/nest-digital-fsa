@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddEmployeesLogComponent } from './add-employees-log/add-employees-log.component';
 import { AddVisitorsLogComponent } from './add-visitors-log/add-visitors-log.component';
+import { AdminLmsHistoryComponent } from './admin-lms-history/admin-lms-history.component';
 import { AdminLmsComponent } from './admin-lms/admin-lms.component';
 import { ApplyLeaveComponent } from './apply-leave/apply-leave.component';
 import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path:"employee-profile" , component:EmployeeProfileComponent},
   {path:"apply-leave" , component:ApplyLeaveComponent},
   {path:"leave-status", component:LeaveStatusComponent},
-  {path:"admin-lms", component:AdminLmsComponent}
+  {path:"admin-lms", component:AdminLmsComponent},
+  {path:"admin-lms-history", component:AdminLmsHistoryComponent}
 ];
 
 @NgModule({

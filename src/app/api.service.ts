@@ -70,10 +70,10 @@ export class ApiService {
   viewLeaves=(value:any)=>{
     return this.http.post("http://localhost:8080/searchLeaves",value)
   }
-  viewLeaves2=()=>{
+  viewLeavesAdmin=()=>{
     return this.http.get("http://localhost:8080/Leaves")
   }
-  editTotal=(value:any)=>{
+  editTotalLeaves=(value:any)=>{
     return this.http.post("http://localhost:8080/editTotal",value)
   }
   editLeaves=(value:any)=>{

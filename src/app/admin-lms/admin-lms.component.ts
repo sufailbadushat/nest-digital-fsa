@@ -17,8 +17,8 @@ export class AdminLmsComponent {
 
     }
 
-    api.viewLeaves2().subscribe(
-      (response:any) => {
+    api.viewLeavesAdmin().subscribe(
+      (response: any) => {
         this.data = response
       }
     )
@@ -63,14 +63,13 @@ export class AdminLmsComponent {
             console.log(data3)
           }
 
-          this.api.editTotal(data3).subscribe(
+          this.api.editTotalLeaves(data3).subscribe(
             (generated: any) => {
               console.log(data3)
               console.log(generated)
-              
-            window.location.reload();
             }
           )
+          window.location.reload();
         }
       }
     )
