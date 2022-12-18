@@ -39,26 +39,26 @@ export class AdminLmsComponent {
           if (value3 == "casual") {
             data3 = {
 
-              "emp_id": value2,
-              "casual_leave": value4,
-              "sick_leave": 0,
-              "special_leave": 0
+              "empId": value2,
+              "casualLeave": value4,
+              "sickLeave": 0,
+              "specialLeave": 0
             }
           } else if (value3 == "sick") {
             data3 = {
 
-              "emp_id": value2,
-              "casual_leave": 0,
-              "sick_leave": value4,
-              "special_leave": 0
+              "empId": value2,
+              "casualLeave": 0,
+              "sickLeave": value4,
+              "specialLeave": 0
             }
           } else {
             data3 = {
 
-              "emp_id": value2,
-              "casual_leave": 0,
-              "sick_leave": 0,
-              "special_leave": value4
+              "empId": value2,
+              "casualLeave": 0,
+              "sickLeave": 0,
+              "specialLeave": value4
             }
             console.log(data3)
           }

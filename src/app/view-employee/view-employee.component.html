@@ -1,39 +1,44 @@
-<app-nav-bar-admin-main></app-nav-bar-admin-main>
+<div class="view bckim"
+    style=" height: 105vh;  background-image: url(https://img.freepik.com/free-vector/realistic-3d-podium-background_23-2149166921.jpg?w=1060&t=st=1671313325~exp=1671313925~hmac=c7e408e777fa71c4b95ab4fa2a3bb3cf3ee2d973a032405b6847a89788c81c32);   background-repeat: no-repeat;    background-size: cover;   background-position: center center;">
+
+
+    <app-nav-bar-admin-main></app-nav-bar-admin-main>
 
 
 
-<div class="container">
-    <div class="row">
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Employee Code</th>
-                        <th scope="col">Employee Name</th>
-                        <th scope="col">Employee Designation</th>
-                        <th scope="col">Employee Salary</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">Username</th>
-                        
-
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let i of employee">
-                    
-                        <td>{{i.empCode}}</td>
-                        <td>{{i.name}}</td>
-                        <td>{{i.designation}}</td>
-                        <td>{{i.salary}}</td>
-                        <td>{{i.address}}</td>
-                        <td>{{i.username}}</td>
-                  <!-- !      <td><button class="btn btn-dark py-1 px-2" (click)="updateEmployee(i.id)">Update</button></td> -->
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Employee Code</th>
+                            <th scope="col">Employee Name</th>
+                            <th scope="col">Employee Designation</th>
+                            <th scope="col">Employee Salary</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Username</th>
 
 
-                    </tr>
-                   
-                </tbody>
-            </table>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let i of employee">
+
+                            <td>{{i.empCode}}</td>
+                            <td>{{i.name}}</td>
+                            <td>{{i.designation}}</td>
+                            <td>{{i.salary}}</td>
+                            <td>{{i.address}}</td>
+                            <td>{{i.username}}</td>
+                            <!-- !      <td><button class="btn btn-dark py-1 px-2" (click)="updateEmployee(i.id)">Update</button></td> -->
+
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

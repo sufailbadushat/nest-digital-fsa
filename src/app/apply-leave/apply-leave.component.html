@@ -1,67 +1,80 @@
-<app-emp-nav></app-emp-nav>
+<div class="view bckim"
+    style=" height: 105vh;  background-image: url(https://img.freepik.com/free-vector/watercolor-halloween-background_52683-43698.jpg?w=1060&t=st=1671312826~exp=1671313426~hmac=fb4940c6b657b6cb724b33d861fdd88e31b95631ad4c6c469f5aebff4c98f036);   background-repeat: no-repeat;    background-size: cover;   background-position: center center;">
 
 
-<div class="container">
-    <div class="row">
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <div class="row g-3 mt-4">
-                <nav class="navbar navbar-expand-lg bg-dark" >
-                    <div class="container-fluid">
-                        <a class="navbar-brand font-monospace text-light">LEAVE DETAILS: </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class=" text-light">^</span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link text-light">Casual Leave: {{data.casual_leaves}}</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-light">Sick Leave: {{data.sick_leave}}</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-light ">Special Leave: {{data.special_leave}}</a>
-                                </li>
-                            </ul>
+    <app-emp-nav></app-emp-nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <div class="row g-3 mt-4">
+                    <nav class="navbar navbar-expand-lg bg-dark">
+                        <div class="container-fluid">
+                            <a class="navbar-brand font-monospace text-light">AVAILABLE LEAVES: </a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class=" text-light">^</span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav font-monospace">
+
+
+                                    <li class="nav-item">
+                                        <a class="nav-link text-light ">Special Leave: {{data.specialLeave}}</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-light">Sick Leave: {{data.sickLeave}}</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-light">Casual Leave: {{data.casualLeave}}</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+                    </nav>
+
+                </div>
+                <div class="row g-3 mt-4">
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <h2 class="font-monospace fw-bold text-center">APPLY FOR A LEAVE</h2>
                     </div>
-                </nav>
-                
-            </div>
-            <div class="row g-3 mt-4">
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <h2 class="font-monospace fw-bold text-center">APPLY FOR A LEAVE</h2>
-                </div>
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <label class="forem-label font-monospace fw-bold">Reason</label>
-                    <input name="reason" [(ngModel)]="reason" type="text" class="form-control">
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label class="forem-label font-monospace fw-bold">Reason</label>
+                        <input name="reason" [(ngModel)]="reason" type="text" class="form-control">
+
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label class="forem-label font-monospace fw-bold">Select Type Of Leave</label>
+
+                        <select name="typeOfleave" [(ngModel)]="typeOfleave" class="form-select text-dark"
+                            aria-label="Default select example">
+                            <ng-template [ngIf]="data.sickLeave>0">
+                                <option value="sick">Sick</option>
+                            </ng-template>
+                            <ng-template [ngIf]="data.casualLeave>0">
+                                <option value="casual">Casual</option>
+                            </ng-template>
+                            <ng-template [ngIf]="data.specialLeave>0">
+                                <option value="special">Special</option>
+                            </ng-template>
+                        </select>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <label for="" class="forem-label font-monospace fw-bold">From</label>
+                        <input name="from" [(ngModel)]="from" type="date" class="form-control">
+
+                    </div>
+                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <label for="" class="forem-label font-monospace fw-bold">To</label>
+                        <input name="to" [(ngModel)]="to" type="date" class="form-control">
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                        <button (click)="readValue()" class="btn btn-dark py-1 font-monospace mt-4">Apply</button>
+                    </div>
 
                 </div>
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <label class="forem-label font-monospace fw-bold">Select Type Of Leave</label>
-
-                    <select name="typeOfleave" [(ngModel)]="typeOfleave" class="form-select text-dark"
-                        aria-label="Default select example">
-                        <option value="sick">Sick</option>
-                        <option value="casual">Casual</option>
-                        <option value="special">Special</option>
-                    </select>
-                </div>
-                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label for="" class="forem-label font-monospace fw-bold">From</label>
-                    <input name="from" [(ngModel)]="from" type="date" class="form-control">
-
-                </div>
-                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label for="" class="forem-label font-monospace fw-bold">To</label>
-                    <input name="to" [(ngModel)]="to" type="date" class="form-control">
-                </div>
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <button (click)="readValue()" class="btn btn-dark py-1 font-monospace mt-4">Apply</button>
-                </div>
-
             </div>
         </div>
     </div>
+</div>
