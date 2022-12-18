@@ -1,58 +1,61 @@
 <app-nav-bar-admin-main></app-nav-bar-admin-main>
 
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-12 div-md-12 col-lg-12 div-xl-12 div-xxl-12">
-                <div class="row g-3 mt-4" >
-                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                        <h1 class="text-dark fw-bold mb-5">Update Employee</h1>
-                    </div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 div-md-12 col-lg-12 div-xl-12 div-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <h1 class="text-dark fw-bold mb-5">Update Employee</h1>
+                </div>
+            </div>
+
+            <div class="row g-3">
+
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label text-dark">Name</label>
+                    <input name="name" [(ngModel)]="name" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label text-dark">Employee Code</label>
+                    <input name="empCode" [(ngModel)]="empCode" type="number" class="form-control" value={{empCode}}>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label text-dark">Address</label>
+                    <input name="address" [(ngModel)]="address" type="text" class="form-control" value="{{address}}">
                 </div>
 
-                <div class="row g-3"  >
-
-                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <label for="" class="form-label text-dark">Name</label>
-                        <input name="name" [(ngModel)]="name"  type="text" class="form-control"  > 
-                    </div>
-                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <label for="" class="form-label text-dark">Employee Code</label>
-                        <input name="empCode" [(ngModel)]="empCode" type="number"  class="form-control" value={{empCode}}>
-                    </div>
-                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <label for="" class="form-label text-dark">Address</label>
-                        <input name="address" [(ngModel)]="address" type="text"  class="form-control" value="{{address}}">
-                    </div>
-              
-                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <label for="" class="form-label text-dark">Designation</label>
-                        <input name="designation" [(ngModel)]="designation" type="text" class="form-control" value="{{designation}}">
-                    </div>
-                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <label for="" class="form-label text-dark">Email Id</label>
-                        <input name="email" [(ngModel)]="email" type="text" class="form-control" value="{{email}}">
-                    </div>
-                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <label for="" class="form-label text-dark">Salary</label>
-                        <input name="salary" [(ngModel)]="salary" type="number" class="form-control" value="{{salary}}">
-                    </div>
-                 
-                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <label for="" class="form-label text-dark">Username</label>
-                        <input name="username" [(ngModel)]="username" type="text" class="form-control" value="{{username}}">
-                    </div>
-                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <label for="" class="form-label text-dark">password</label>
-                        <input name="password" [(ngModel)]="password" type="text" class="form-control" value="{{password}}">
-                    </div>
-                  
-                    
-                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                       <a (click)="readValues()" class="btn btn-dark fw-bold font-monospace py-1 mt-5">Update</a>
-                    </div>
-
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label text-dark">Designation</label>
+                    <input name="designation" [(ngModel)]="designation" type="text" class="form-control"
+                        value="{{designation}}">
                 </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label text-dark">Email Id</label>
+                    <input name="email" [(ngModel)]="email" type="text" class="form-control" value="{{email}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label text-dark">Salary</label>
+                    <input name="salary" [(ngModel)]="salary" type="number" class="form-control" value="{{salary}}">
+                </div>
+
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label text-dark">Username</label>
+                    <input name="username" [(ngModel)]="username" type="text" class="form-control" value="{{username}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label text-dark">password</label>
+                    <input name="password" [(ngModel)]="password" type="text" class="form-control" value="{{password}}">
+                </div>
+
+
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <a (click)="readValues()" class="btn btn-dark fw-bold font-monospace py-1 mt-5">Update</a>
+                </div>
+
             </div>
         </div>
     </div>
+</div>
+
+<app-footer></app-footer>
